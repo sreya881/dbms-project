@@ -16,16 +16,17 @@
     <div class="parent">
         <div class="child">
           <h2>Sign in</h2>
-          <h3>Wellcome</h3>
+          <h3>Welcome</h3>
           <h3>Please fill the following details</h3>
-          
-
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Username">
-          <input type="number" placeholder="Age">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Password">
-          <button class="signin_btn">Sign in</button>
+          <form action="http://localhost:5000/register" method="POST" style="display: flex; flex-direction: column;align-items: stretch; gap: 15px; ">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="number" name="age" placeholder="Age" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button class="signin_btn" href="medicine.html" type="submit">Sign in</button><br>
+          </form>
+            <a class="login-link" href="login.html">Already have an account? Log in</a>
         </div>
     </div>
 </body>

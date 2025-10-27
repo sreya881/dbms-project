@@ -16,10 +16,12 @@
     <div class="parent">
         <div class="child">
             <h2>Log in</h2>
-            <input type="text" placeholder="Enter Username">
-            <input type="password" placeholder="Enter Password">
-            <button class="login_btn" onclick="window.location.href='login.html'">Log in</button>
-             <h3>Don't have an account<button class="h3_btn" onclick="window.location.href='login.html'">create account</button></h3>
+            <form action="http://localhost:5000/login" method="POST" >
+            <input type="email" name="email"placeholder=" Enter email" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit" class="login_btn" onclick="window.location.href='medicine.html'">Log in</button>
+            </form>
+             <h3>Don't have an account<button class="h3_btn" onclick="window.location.href='signin.html'">create account</button></h3>
         </div>
     </div>
 </body>

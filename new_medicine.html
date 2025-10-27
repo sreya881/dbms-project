@@ -17,26 +17,28 @@
         <div class="child">
             <h1>New Medicine</h1>
             <h2>please fill the following details</h2>
-            <form>
-                <input class="textbox1" type="text" placeholder="Medicine Name">
+            <form action="http://localhost:5000/add_medicine" method="POST">
+                <input class="textbox1" type="text" name="medicine name" placeholder="Medicine Name" required>
                 <br>
-                <input class="textbox2" type="text" placeholder="Dose">
+                <input class="textbox2" type="text" name="dose" placeholder="Dose" required>
                 <div class="radio_div">
                 <h3>Before / After food?</h3>
-                <input type="radio" name="time" value="Before"><label for="Before">Before</label>
-                <input type="radio" name="time" value="After"><label for="After">After</label>
+                <input type="radio" name="food_time" value="Before" required><label for="Before">Before</label>
+                <input type="radio" name="food_time" value="After" required><label for="After">After</label>
                 </div>
                 <div class="checkbox_div">
                 <h3>Medication Schedule</h3>
-                <label><input type="checkbox" name="time" value="morning"> Morning</label>
-                <label><input type="checkbox" name="time" value="noon"> Noon</label>
-                <label><input type="checkbox" name="time" value="night"> Night</label>
+                <label><input type="checkbox" name="morning" value="morning"> Morning</label>
+                <label><input type="checkbox" name="noon" value="noon"> Noon</label>
+                <label><input type="checkbox" name="night" value="night"> Night</label>
                 </div>
+                <input  type="date" name="start_date" placeholder="Start Date" required>
+                <input  type="date" name="end_date" placeholder="End Date" required>
             </form>
         </div>
         <div class="btn_div">
-        <button class="cancel_btn">Cancel</button>
-        <button class="add_btn">Enter Medicine</button>
+        <button type="button" class="cancel_btn" onclick="window.location.href='medicine.html'">Cancel</button>
+        <button type="button" class="add_btn" onclick="window.Location.href='medicine.html'">Enter Medicine</button>
         </div>
 
     </div>
